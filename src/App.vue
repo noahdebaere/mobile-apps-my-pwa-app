@@ -4,6 +4,7 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <button  v-if="updateAvailable" @click="update">Click to update application</button>
     <p> This site is created by Noah Debaere for the Mobile Apps course</p>
+    <p> During his studies at the Vives Hogeschool </p>
   </div>
 </template>
 
