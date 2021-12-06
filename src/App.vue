@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
+    <button  v-if="updateAvailable">Click to update application</button>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -12,6 +13,21 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  created() {
+    document.addEventListener(
+      'swupdatefound', this.updateTheApp, { once: true }
+    ); 
+  },
+  data: () => ({
+    registration: null,
+    updateAvailable: false
+  }),
+  methods: {
+    updateTheApp(e) {
+      this.registration = e.detail
+      this.updateAvailable = true;
+    }
   }
 }
 </script>
