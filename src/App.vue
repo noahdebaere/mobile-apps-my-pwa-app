@@ -26,7 +26,13 @@ export default {
     updateTheApp(e) {
       this.registration = e.detail
       this.updateAvailable = true;
-    }
+    },
+    update(){ 
+      this.updateAvailable =  false; 
+      if (this.registration || this.registration.waiting){ 
+        this.registration.waiting.postMessage({type:'SKIP_WAITING'});   
+      }
+    },
   }
 }
 </script>
