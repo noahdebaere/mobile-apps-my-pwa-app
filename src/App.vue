@@ -18,7 +18,7 @@ export default {
       'swupdatefound', this.updateTheApp, { once: true }
     );
     navigator.serviceWorker.addEventListener( 'controllerchange', () => {
-      if  (this.isRefreshing)  return; 
+      if (this.isRefreshing) return; 
       this.isRefreshing =  true; 
       window.location.reload();
       }
@@ -26,7 +26,8 @@ export default {
   },
   data: () => ({
     registration: null,
-    updateAvailable: false
+    updateAvailable: false,
+    isRefreshing: false
   }),
   methods: {
     updateTheApp(e) {
