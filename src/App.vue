@@ -3,7 +3,7 @@
     <h1> This is my first ever PWA Application </h1>
     <img alt="Vue logo" src="./assets/logo.png">
     <button  v-if="updateAvailable" @click="update">Click to update application</button>
-    <p> This site is created by Noah Debaere for the Mobile Apps course</p>
+    <p> This site is created by Noah Debaere for the Mobile Apps course!</p>
   </div>
 </template>
 
